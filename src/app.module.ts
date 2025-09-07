@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { DofusDbModule } from './dofus-db/dofus-db.module';
+import { ItemModule } from './item/item.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [DofusDbModule, ItemModule],
 })
 export class AppModule {}
